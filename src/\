@@ -1,0 +1,39 @@
+import torch
+from torch import nn
+import torch.nn.functional as F
+from base_classes import BaseGNN
+from model_configurations import set_block, set_function
+from graph_rewiring import KNN, add_edges, edge_sampling, GDCWrapper
+from utils import DummyData, get_full_adjacency
+from function_transformer_attention import SpGraphTransAttentionLayer
+from torch_geometric.utils import softmax
+import torch_sparse
+from torch_geometric.utils.loop import add_remaining_self_loops
+import numpy as np
+from data import get_dataset
+from utils import MaxNFEException, squareplus
+from base_classes import ODEFun
+
+
+from grand_discritized import *
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+def load_opt(device):
+    opt["device"] = device
+    opt = None
+    return opt
+def load_model(opt):
+    pass
+def data_loader(opt):
+    pass
+
+def main(opt):
+    opt = load_opt("cuda")
+    dataset = get_dataset(opt, "../data", False)
+    model = load_model(opt)
+    dataset = load 
+    pass
+
+if __name__ == "__main__":
+    main(opt)
