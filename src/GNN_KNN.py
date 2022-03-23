@@ -13,7 +13,8 @@ class GNN_KNN(BaseGNN):
     self.f = set_function(opt)
     block = set_block(opt)
     time_tensor = torch.tensor([0, self.T]).to(device)
-    self.odeblock = block(self.f, self.regularization_fns, opt, dataset.data, device, t=time_tensor).to(device)
+    self.odeblock = block(self.f, self.regularization_fns, opt,
+                            dataset.data, device, t=time_tensor).to(device)
     self.data_edge_index = dataset.data.edge_index.to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
 
