@@ -13,6 +13,8 @@ class BlockNotDefined(Exception):
 class FunctionNotDefined(Exception):
   pass
 
+class NormTypeNotDefined(Exception):
+  pass
 
 def set_block(opt):
   ode_str = opt['block']
@@ -26,6 +28,8 @@ def set_block(opt):
     block = RewireAttODEblock
   elif ode_str == 'constant':
     block = ConstantODEblock
+  elif ode_str == "norm":
+    block = GrandExtendDiscritizeNet
   else:
     raise BlockNotDefined
   return block
@@ -39,6 +43,8 @@ def set_function(opt):
     f = ODEFuncAtt
   elif ode_str == 'transformer':
     f = ODEFuncTransformerAtt
+  elif ode_str == 'discritized_norm':
+    f = GrandDiscritizedBlock
   else:
     raise FunctionNotDefined
   return f

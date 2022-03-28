@@ -106,6 +106,8 @@ class BaseGNN(MessagePassing):
     self.device = device
     self.fm = Meter()
     self.bm = Meter()
+    self.depth = opt['depth']
+    self.discritized_type = opt["discritize_type"]
 
     if opt['beltrami']:
       self.mx = nn.Linear(self.num_features, opt['feat_hidden_dim'])

@@ -1,9 +1,9 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
+# from graph_rewiring import KNN, add_edges, edge_sampling, GDCWrapper
 from base_classes import BaseGNN
 from model_configurations import set_block, set_function
-from graph_rewiring import KNN, add_edges, edge_sampling, GDCWrapper
 from utils import DummyData, get_full_adjacency
 from function_transformer_attention import SpGraphTransAttentionLayer
 from torch_geometric.utils import softmax
@@ -19,7 +19,7 @@ class GrandDiscritizedBlock(ODEFunc):
 
   def __init__(self, in_features, out_features, opt, data, device):
     super(GrandDiscritizedBlock, self).__init__(opt, data, device)
-
+    data = data.data
     if opt['self_loop_weight'] > 0:
       self.edge_index, self.edge_weight = add_remaining_self_loops(data.edge_index, data.edge_attr,
                                                                    fill_value=opt['self_loop_weight'])
@@ -27,7 +27,6 @@ class GrandDiscritizedBlock(ODEFunc):
       self.edge_index, self.edge_weight = data.edge_index, data.edge_attr
     self.multihead_att_layer = SpGraphTransAttentionLayer(in_features, out_features, opt,
                                                           device, edge_weights=self.edge_weight).to(device)
-
   def multiply_attention(self, x, attention, v=None):
     # todo would be nice if this was more efficient
     if self.opt['mix_features']:
@@ -64,58 +63,114 @@ class GrandDiscritizedBlock(ODEFunc):
 
 
 class GrandDiscritizedNet(BaseGNN):
-  def __init__(self, in_features, out_features, hidden_dim, opt, data, device):
+  def __init__(self, hidden_dim, opt, data, device):
     super(GrandDiscritizedNet, self).__init__(opt, data, device)
     opt["add_source"] = True
     self.mol_list = nn.ModuleList()
     self.mol_list.append(
-        GrandDiscritizedBlock(in_features, hidden_dim[0], opt, data, device)
+        GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device)
     )
     self.opt = opt
-    self.data = data
+    self.data = data.data
     self.device = device
     self.data_edge_index = data.data.edge_index.to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
-    for id in range(len(hidden_dim) - 1):
-      self.mol_list.append(GrandDiscritizedBlock(in_features, hidden_dim[id + 1], opt, data, device))
-    self.mol_list.append(GrandDiscritizedBlock(in_features,out_features, opt,data, device))
+    for id in range(opt["depth"]):
+      self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device))
+    self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt,data, device))
     ###################################3333
 #    self.data_edge_index = dataset.data.edge_index.to(device)
 #    self.fa = get_full_adjacency(self.num_nodes).to(device)
-  def forward(self, x, pos_encoding):
-    out = x
-    if self.opt['use_labels']:
+    def forward(self, x, pos_encoding = None):
+    # Encode
+      if self.opt['use_labels']:
         y = x[:, -self.num_classes:]
         x = x[:, :-self.num_classes]
 
+      out = x
+      for i in range(len(self.mol_list)):
+      #print(f"After layers number {i+1}")
+        out = self.mol_list[i](out)
+      return out 
+class GrandExtendDiscritizedNet(GrandDiscritizedNet):
+  def __init__(self,opt, data, device):
+    super().__init__(opt["hidden_dim"], opt, data, device)
+    self.discritize_type = opt["discritize_type"]
+  def forward(self,x, pos_encodin=False):
+#    print(x.shape, " this is shape before doing anything")
+    if self.opt['use_labels']:
+      y = x[:, -self.num_classes:]
+      x = x[:, :-self.num_classes]
     if self.opt['beltrami']:
       x = F.dropout(x, self.opt['input_dropout'], training=self.training)
       x = self.mx(x)
-    for i in range(len(self.mol_list)):
-      #print(f"After layers number {i+1}")
-      out = self.mol_list[i](out)
-    return out 
-class GrandExtendDiscritizedNet(GrandDiscritizedNet):
-  def __init__(self, in_features, out_features, hidden_dim, opt, data, device):
-    super().__init__(in_features, out_features, hidden_dim, opt, data, device)
-  def forward(self,x):
+      p = F.dropout(pos_encoding, self.opt['input_dropout'], training=self.training)
+      p = self.mp(p)
+      x = torch.cat([x, p], dim=1)
+    else:
+      x = F.dropout(x, self.opt['input_dropout'], training=self.training)
+      x = self.m1(x)
+
+    if self.opt['use_mlp']:
+      x = F.dropout(x, self.opt['dropout'], training=self.training)
+      x = F.dropout(x + self.m11(F.relu(x)), self.opt['dropout'], training=self.training)
+      x = F.dropout(x + self.m12(F.relu(x)), self.opt['dropout'], training=self.training)
+    # todo investigate if some input non-linearity solves the problem with smooth deformations identified in the ANODE paper
+
+    if self.opt['use_labels']:
+      x = torch.cat([x, y], dim=-1)
+
+    if self.opt['batch_norm']:
+      x = self.bn_in(x)
+
+    # Solve the initial value problem of the ODE.
+    if self.opt['augment']:
+      c_aux = torch.zeros(x.shape).to(self.device)
+      x = torch.cat([x, c_aux], dim=1)
     out = x
+#    print(f"This is the output shape before forward those Blocks: {x.shape}")
+    for i in range(len(self.mol_list)):
+      if self.discritize_type=="norm":
+
+        out = self.mol_list[i](out) * torch.norm(x, dim=(-1), keepdim=True)
+      elif self.discritize_type == "accumulate_norm":
+        out = self.mol_list[i](out) * torch.norm(out, dim =(-1), keepdim=True) * torch.norm(x, dim = (-1), keepdim=True)
+      else:
+        raise NormTypeNotDefined
+#      print(f"After layers number {i+1}")
+    z = out
+    if self.opt['augment']:
+      z = torch.split(z, x.shape[1] // 2, dim=1)[0]
+
+    # Activation.
+    z = F.relu(z)
+
+    if self.opt['fc_out']:
+      z = self.fc(z)
+      z = F.relu(z)
+
+    # Dropout.
+    z = F.dropout(z, self.opt['dropout'], training=self.training)
+
+    # Decode each node embedding to get node label.
+    z = self.m2(z)
+    return z
+
     #print("")
     #print(torch.norm(x, dim=(-1)))
-
-    for i in range(len(self.mol_list)):
-      out = self.mol_list[i](out) * torch.norm(x, dim=(-1), keepdim=True)
-      print(f"After layers number {i+1}")
-    return out
+    
 
 
 ######################################################33
 if __name__ == "__main__":
-    print(f"Test the grand_discritized file")
-    device = "cuda"
-    dataset = get_dataset(opt, '../data', False)
-    dataset.data = dataset.data.to(device, non_blocking=True)
-    print(type(dataset.data.x))
-    func = GrandExtendDiscritizedNet(dataset.data.num_features, 6, [20,10,4], opt, dataset.data, device)
-    print(type(dataset.data))
-    out = func(dataset.data.x)
+  
+  print(f"Test the grand_discritized file")
+  opt = {'depth': 5,'use_cora_defaults': False, 'dataset': 'Cora', 'data_norm': 'rw', 'self_loop_weight': 1.0, 'use_labels': False, 'geom_gcn_splits': False, 'num_splits': 1, 'label_rate': 0.5, 'planetoid_split': False, 'hidden_dim': 16, 'fc_out': False, 'input_dropout': 0.5, 'dropout': 0.0, 'batch_norm': False, 'optimizer': 'adam', 'lr': 0.01, 'decay': 0.0005, 'epoch': 100, 'alpha': 1.0, 'alpha_dim': 'sc', 'no_alpha_sigmoid': False, 'beta_dim': 'sc', 'block': 'constant', 'function': 'laplacian', 'use_mlp': False, 'add_source': False, 'cgnn': False, 'time': 1.0, 'augment': False, 'method': None, 'step_size': 1, 'max_iters': 100, 'adjoint_method': 'adaptive_heun', 'adjoint': False, 'adjoint_step_size': 1, 'tol_scale': 1.0, 'tol_scale_adjoint': 1.0, 'ode_blocks': 1, 'max_nfe': 1000, 'no_early': False, 'earlystopxT': 3, 'max_test_steps': 100, 'leaky_relu_slope': 0.2, 'attention_dropout': 0.0, 'heads': 4, 'attention_norm_idx': 0, 'attention_dim': 64, 'mix_features': False, 'reweight_attention': False, 'attention_type': 'scaled_dot', 'square_plus': False, 'jacobian_norm2': None, 'total_deriv': None, 'kinetic_energy': None, 'directional_penalty': None, 'not_lcc': True, 'rewiring': None, 'gdc_method': 'ppr', 'gdc_sparsification': 'topk', 'gdc_k': 64, 'gdc_threshold': 0.0001, 'gdc_avg_degree': 64, 'ppr_alpha': 0.05, 'heat_time': 3.0, 'att_samp_pct': 1, 'use_flux': False, 'exact': False, 'M_nodes': 64, 'new_edges': 'random', 'sparsify': 'S_hat', 'threshold_type': 'topk_adj', 'rw_addD': 0.02, 'rw_rmvR': 0.02, 'rewire_KNN': False, 'rewire_KNN_T': 'T0', 'rewire_KNN_epoch': 5, 'rewire_KNN_k': 64, 'rewire_KNN_sym': False, 'KNN_online': False, 'KNN_online_reps': 4, 'KNN_space': 'pos_distance', 'beltrami': False, 'fa_layer': False, 'pos_enc_type': 'DW64', 'pos_enc_orientation': 'row', 'feat_hidden_dim': 64, 'pos_enc_hidden_dim': 32, 'edge_sampling': False, 'edge_sampling_T': 'T0', 'edge_sampling_epoch': 5, 'edge_sampling_add': 0.64, 'edge_sampling_add_type': 'importance', 'edge_sampling_rmv': 0.32, 'edge_sampling_sym': False, 'edge_sampling_online': False, 'edge_sampling_online_reps': 4, 'edge_sampling_space': 'attention', 'symmetric_attention': False, 'fa_layer_edge_sampling_rmv': 0.8, 'gpu': 0, 'pos_enc_csv': False, 'pos_dist_quantile': 0.001, 'discritize_type': 'norm'}
+  device = "cpu"
+  dataset = get_dataset(opt, '../data', False)
+  dataset.data = dataset.data.to(device, non_blocking=True)
+  print(type(dataset.data.x))
+  print(type(dataset.data))
+  func = GrandExtendDiscritizedNet(opt, dataset, device).to(device)
+  out = func(dataset.data.x)
+

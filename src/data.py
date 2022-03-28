@@ -138,7 +138,7 @@ def remap_edges(edges: list, mapper: dict) -> list:
 def set_train_val_test_split(
         seed: int,
         data: Data,
-        num_development: int = 1500,
+        num_development: int = 2500,
         num_per_class: int = 20) -> Data:
   rnd_state = np.random.RandomState(seed)
   num_nodes = data.y.shape[0]
