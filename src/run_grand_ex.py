@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from GNN import GNN
 from GNN_early import GNNEarly
 from GNN_KNN import GNN_KNN
+import tqdm
 from GNN_KNN_early import GNNKNNEarly
 import time
 from data import get_dataset, set_train_val_test_split
@@ -13,6 +14,10 @@ from ogb.nodeproppred import Evaluator
 from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
 from best_params import  best_params_dict
 from grand_discritized import GrandExtendDiscritizedNet
+
+
+import wandb
+
 
 
 def get_optimizer(name, parameters, lr, weight_decay=0):
@@ -186,6 +191,9 @@ def test_OGB(model, data, pos_encoding, opt):
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt, **best_opt}
+  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']}"
+  wandb.init(project="Grand_Discritize", entity="dungxibo123", group=opt['dataset'], name=wandb_name)
+  wandb.config = opt
 
   if cmd_opt['beltrami']:
     opt['beltrami'] = True
@@ -217,7 +225,8 @@ def main(cmd_opt):
 
   this_test = test_OGB if opt['dataset'] == 'ogbn-arxiv' else test
 
-  for epoch in range(1, opt['epoch']):
+  for epoch in tqdm.tqdm(range(1, opt['epoch'] + 1)):
+    
     start_time = time.time()
 
     if opt['rewire_KNN'] and epoch % opt['rewire_KNN_epoch'] == 0 and epoch != 0:
@@ -243,8 +252,16 @@ def main(cmd_opt):
 
     log = 'Epoch: {:03d}, Runtime {:03f}, Loss {:03f}, Train: {:.4f}, Val: {:.4f}, Test: {:.4f}, Best time: {:.4f}'
 
-    print(log.format(epoch + 1, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, best_time))
-  print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(val_acc, test_acc,
+    print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, best_time))
+    wandb.log(
+        {
+            'train_acc': tmp_train_acc,
+            'test_acc': tmp_test_acc,
+            'val_acc': tmp_val_acc,
+            'loss': loss
+        }
+    )
+  print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(tmp_val_acc, tmp_test_acc,
                                                                                                      best_epoch,
                                                                                                      best_time))
   return train_acc, val_acc, test_acc
@@ -272,16 +289,16 @@ if __name__ == '__main__':
   parser.add_argument('--input_dropout', type=float, default=0.2, help='Input dropout rate.')
   parser.add_argument('--dropout', type=float, default=0.2, help='Dropout rate.')
   parser.add_argument("--batch_norm", dest='batch_norm', action='store_true', help='search over reg params')
-  parser.add_argument('--optimizer', type=str, default='adam', help='One from sgd, rmsprop, adam, adagrad, adamax.')
+  parser.add_argument('--optimizer', type=str, default='adamax', help='One from sgd, rmsprop, adam, adagrad, adamax.')
   parser.add_argument('--lr', type=float, default=0.5, help='Learning rate.')
   parser.add_argument('--decay', type=float, default=1e-3, help='Weight decay for optimization')
-  parser.add_argument('--epoch', type=int, default=100, help='Number of training epochs per iteration.')
-  parser.add_argument('--alpha', type=float, default=0.2, help='Factor in front matrix A.')
+  parser.add_argument('--epoch', type=int, default=500, help='Number of training epochs per iteration.')
+  parser.add_argument('--alpha', type=float, default=0.8, help='Factor in front matrix A.')
   parser.add_argument('--alpha_dim', type=str, default='sc', help='choose either scalar (sc) or vector (vc) alpha')
 
 
   ### discritized param
-  parser.add_argument('--depth', type=int, default=20, help='Default depth of the network')
+  parser.add_argument('--depth', type=int, default=10, help='Default depth of the network')
   parser.add_argument('--discritize_type', type=str, default="norm", help="norm or acc_norm")
 
 
@@ -297,12 +314,12 @@ if __name__ == '__main__':
                       help='If try get rid of alpha param and the beta*x0 source term')
 
   # ODE args
-  parser.add_argument('--time', type=float, default=1.0, help='End time of ODE integrator.')
+  parser.add_argument('--time', type=float, default=100.0, help='End time of ODE integrator.')
   parser.add_argument('--augment', action='store_true',
                       help='double the length of the feature vector by appending zeros to stabilist ODE learning')
   parser.add_argument('--method', type=str, default='dopri5',
                       help="set the numerical solver: dopri5, euler, rk4, midpoint")
-  parser.add_argument('--step_size', type=float, default=1,
+  parser.add_argument('--step_size', type=float, default=1e-3,
                       help='fixed step size when using fixed step solvers e.g. rk4')
   parser.add_argument('--max_iters', type=float, default=100, help='maximum number of integration steps')
   parser.add_argument("--adjoint_method", type=str, default="adaptive_heun",
@@ -325,9 +342,9 @@ if __name__ == '__main__':
                            "used if getting OOM errors at test time")
 
   # Attention args
-  parser.add_argument('--leaky_relu_slope', type=float, default=0.2,
+  parser.add_argument('--leaky_relu_slope', type=float, default=0.15,
                       help='slope of the negative part of the leaky relu used in attention')
-  parser.add_argument('--attention_dropout', type=float, default=0., help='dropout of attention weights')
+  parser.add_argument('--attention_dropout', type=float, default=0.2, help='dropout of attention weights')
   parser.add_argument('--heads', type=int, default=4, help='number of attention heads')
   parser.add_argument('--attention_norm_idx', type=int, default=0, help='0 = normalise rows, 1 = normalise cols')
   parser.add_argument('--attention_dim', type=int, default=64,

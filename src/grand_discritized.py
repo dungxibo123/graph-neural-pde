@@ -13,6 +13,7 @@ import numpy as np
 from data import get_dataset
 from utils import MaxNFEException, squareplus
 from base_classes import ODEFunc
+import wandb
 
 
 class GrandDiscritizedBlock(ODEFunc):
@@ -66,6 +67,7 @@ class GrandDiscritizedNet(BaseGNN):
   def __init__(self, hidden_dim, opt, data, device):
     super(GrandDiscritizedNet, self).__init__(opt, data, device)
     opt["add_source"] = True
+    self.step_size = opt["step_size"]
     self.mol_list = nn.ModuleList()
     self.mol_list.append(
         GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device)
@@ -93,7 +95,7 @@ class GrandDiscritizedNet(BaseGNN):
         out = self.mol_list[i](out)
       return out 
 class GrandExtendDiscritizedNet(GrandDiscritizedNet):
-  def __init__(self,opt, data, device):
+  def __init__(self, opt, data, device):
     super().__init__(opt["hidden_dim"], opt, data, device)
     self.discritize_type = opt["discritize_type"]
   def forward(self,x, pos_encodin=False):
@@ -132,11 +134,11 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     for i in range(len(self.mol_list)):
       if self.discritize_type=="norm":
 
-        out = self.mol_list[i](out) * torch.norm(x, dim=(-1), keepdim=True)
+        out = out + self.step_size * self.mol_list[i](out) * torch.norm(x, dim=(-1), keepdim=True)
       elif self.discritize_type == "accumulate_norm":
-        out = self.mol_list[i](out) * torch.norm(out, dim =(-1), keepdim=True) * torch.norm(x, dim = (-1), keepdim=True)
+        out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, dim =(-1), keepdim=True) * torch.norm(x, dim = (-1), keepdim=True)
       else:
-        raise NormTypeNotDefined
+        out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")
     z = out
     if self.opt['augment']:

@@ -393,7 +393,8 @@ if __name__ == '__main__':
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
 
-
+  parser.add_argument('--depth', type=int, default=10)
+  parser.add_argument('--discritize_type', type=str, default="norm")
   args = parser.parse_args()
 
   opt = vars(args)
