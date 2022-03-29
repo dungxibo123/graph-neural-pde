@@ -3,12 +3,8 @@ import numpy as np
 import torch
 from torch_geometric.nn import GCNConv, ChebConv  # noqa
 import torch.nn.functional as F
-from GNN import GNN
-from GNN_early import GNNEarly
-from GNN_KNN import GNN_KNN
-import tqdm
-from GNN_KNN_early import GNNKNNEarly
 import time
+import tqdm
 from data import get_dataset, set_train_val_test_split
 from ogb.nodeproppred import Evaluator
 from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
@@ -192,7 +188,7 @@ def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt,**best_opt}
   wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']}"
-  wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name)
+  wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
   wandb.config = opt
 
   if cmd_opt['beltrami']:
@@ -426,5 +422,5 @@ if __name__ == '__main__':
   args = parser.parse_args()
 
   opt = vars(args)
-
+  print(opt["attention_type"])
   main(opt)

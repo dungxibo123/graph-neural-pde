@@ -71,7 +71,7 @@ class GrandDiscritizedBlock(ODEFunc):
 class GrandDiscritizedNet(BaseGNN):
   def __init__(self, hidden_dim, opt, data, device):
     super(GrandDiscritizedNet, self).__init__(opt, data, device)
-    opt["add_source"] = True
+#    opt["add_source"] = True
     self.step_size = torch.Tensor([opt["step_size"]]).to(device)
     self.mol_list = nn.ModuleList()
     self.mol_list.append(

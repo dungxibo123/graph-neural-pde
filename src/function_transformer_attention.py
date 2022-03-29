@@ -185,7 +185,6 @@ class SpGraphTransAttentionLayer(nn.Module):
 
       src = q[edge[0, :], :, :]
       dst_k = k[edge[1, :], :, :]
-
     if self.opt['attention_type'] == "scaled_dot":
       prods = torch.sum(src * dst_k, dim=1) / np.sqrt(self.d_k)
 
