@@ -190,7 +190,7 @@ def test_OGB(model, data, pos_encoding, opt):
 
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
-  opt = {**best_opt, **cmd_opt}
+  opt = {**cmd_opt,**best_opt}
   wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']}"
   wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name)
   wandb.config = opt
@@ -211,7 +211,7 @@ def main(cmd_opt):
 #    model = GNN_KNN(opt, dataset, device).to(device) if opt["no_early"] else GNNKNNEarly(opt, dataset, device).to(device)
 #  else:
 #    model = GNN(opt, dataset, device).to(device) if opt["no_early"] else GNNEarly(opt, dataset, device).to(device)
-  model = GrandExtendDiscritizedNet(opt, dataset, device)
+  model = GrandExtendDiscritizedNet(opt, dataset, device).to(device)
 
   if not opt['planetoid_split'] and opt['dataset'] in ['Cora','Citeseer','Pubmed']:
     dataset.data = set_train_val_test_split(np.random.randint(0, 1000), dataset.data, num_development=5000 if opt["dataset"] == "CoauthorCS" else 2000)
@@ -290,7 +290,7 @@ if __name__ == '__main__':
   parser.add_argument('--dropout', type=float, default=0.2, help='Dropout rate.')
   parser.add_argument("--batch_norm", dest='batch_norm', action='store_true', help='search over reg params')
   parser.add_argument('--optimizer', type=str, default='adamax', help='One from sgd, rmsprop, adam, adagrad, adamax.')
-  parser.add_argument('--lr', type=float, default=0.5, help='Learning rate.')
+  parser.add_argument('--lr', type=float, default=1e-3, help='Learning rate.')
   parser.add_argument('--decay', type=float, default=1e-3, help='Weight decay for optimization')
   parser.add_argument('--epoch', type=int, default=500, help='Number of training epochs per iteration.')
   parser.add_argument('--alpha', type=float, default=0.8, help='Factor in front matrix A.')

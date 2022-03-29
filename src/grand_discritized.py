@@ -26,6 +26,11 @@ class GrandDiscritizedBlock(ODEFunc):
                                                                    fill_value=opt['self_loop_weight'])
     else:
       self.edge_index, self.edge_weight = data.edge_index, data.edge_attr
+    self.edge_index = self.edge_index.to(device)
+    try:
+        self.edge_weight = self.edge_weight.to(device)
+    except Exception as e:
+        pass
     self.multihead_att_layer = SpGraphTransAttentionLayer(in_features, out_features, opt,
                                                           device, edge_weights=self.edge_weight).to(device)
   def multiply_attention(self, x, attention, v=None):
@@ -67,10 +72,10 @@ class GrandDiscritizedNet(BaseGNN):
   def __init__(self, hidden_dim, opt, data, device):
     super(GrandDiscritizedNet, self).__init__(opt, data, device)
     opt["add_source"] = True
-    self.step_size = opt["step_size"]
+    self.step_size = torch.Tensor([opt["step_size"]]).to(device)
     self.mol_list = nn.ModuleList()
     self.mol_list.append(
-        GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device)
+        GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device)
     )
     self.opt = opt
     self.data = data.data
@@ -78,8 +83,8 @@ class GrandDiscritizedNet(BaseGNN):
     self.data_edge_index = data.data.edge_index.to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
     for id in range(opt["depth"]):
-      self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device))
-    self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt,data, device))
+      self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device))
+    self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt,data, device).to(device))
     ###################################3333
 #    self.data_edge_index = dataset.data.edge_index.to(device)
 #    self.fa = get_full_adjacency(self.num_nodes).to(device)
@@ -98,7 +103,7 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
   def __init__(self, opt, data, device):
     super().__init__(opt["hidden_dim"], opt, data, device)
     self.discritize_type = opt["discritize_type"]
-  def forward(self,x, pos_encodin=False):
+  def forward(self,x, pos_encoding=False):
 #    print(x.shape, " this is shape before doing anything")
     if self.opt['use_labels']:
       y = x[:, -self.num_classes:]
@@ -134,7 +139,9 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     for i in range(len(self.mol_list)):
       if self.discritize_type=="norm":
 
-        out = out + self.step_size * self.mol_list[i](out) * torch.norm(x, dim=(-1), keepdim=True)
+        out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)
+        ####
+
       elif self.discritize_type == "accumulate_norm":
         out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, dim =(-1), keepdim=True) * torch.norm(x, dim = (-1), keepdim=True)
       else:
@@ -168,7 +175,7 @@ if __name__ == "__main__":
   
   print(f"Test the grand_discritized file")
   opt = {'depth': 5,'use_cora_defaults': False, 'dataset': 'Cora', 'data_norm': 'rw', 'self_loop_weight': 1.0, 'use_labels': False, 'geom_gcn_splits': False, 'num_splits': 1, 'label_rate': 0.5, 'planetoid_split': False, 'hidden_dim': 16, 'fc_out': False, 'input_dropout': 0.5, 'dropout': 0.0, 'batch_norm': False, 'optimizer': 'adam', 'lr': 0.01, 'decay': 0.0005, 'epoch': 100, 'alpha': 1.0, 'alpha_dim': 'sc', 'no_alpha_sigmoid': False, 'beta_dim': 'sc', 'block': 'constant', 'function': 'laplacian', 'use_mlp': False, 'add_source': False, 'cgnn': False, 'time': 1.0, 'augment': False, 'method': None, 'step_size': 1, 'max_iters': 100, 'adjoint_method': 'adaptive_heun', 'adjoint': False, 'adjoint_step_size': 1, 'tol_scale': 1.0, 'tol_scale_adjoint': 1.0, 'ode_blocks': 1, 'max_nfe': 1000, 'no_early': False, 'earlystopxT': 3, 'max_test_steps': 100, 'leaky_relu_slope': 0.2, 'attention_dropout': 0.0, 'heads': 4, 'attention_norm_idx': 0, 'attention_dim': 64, 'mix_features': False, 'reweight_attention': False, 'attention_type': 'scaled_dot', 'square_plus': False, 'jacobian_norm2': None, 'total_deriv': None, 'kinetic_energy': None, 'directional_penalty': None, 'not_lcc': True, 'rewiring': None, 'gdc_method': 'ppr', 'gdc_sparsification': 'topk', 'gdc_k': 64, 'gdc_threshold': 0.0001, 'gdc_avg_degree': 64, 'ppr_alpha': 0.05, 'heat_time': 3.0, 'att_samp_pct': 1, 'use_flux': False, 'exact': False, 'M_nodes': 64, 'new_edges': 'random', 'sparsify': 'S_hat', 'threshold_type': 'topk_adj', 'rw_addD': 0.02, 'rw_rmvR': 0.02, 'rewire_KNN': False, 'rewire_KNN_T': 'T0', 'rewire_KNN_epoch': 5, 'rewire_KNN_k': 64, 'rewire_KNN_sym': False, 'KNN_online': False, 'KNN_online_reps': 4, 'KNN_space': 'pos_distance', 'beltrami': False, 'fa_layer': False, 'pos_enc_type': 'DW64', 'pos_enc_orientation': 'row', 'feat_hidden_dim': 64, 'pos_enc_hidden_dim': 32, 'edge_sampling': False, 'edge_sampling_T': 'T0', 'edge_sampling_epoch': 5, 'edge_sampling_add': 0.64, 'edge_sampling_add_type': 'importance', 'edge_sampling_rmv': 0.32, 'edge_sampling_sym': False, 'edge_sampling_online': False, 'edge_sampling_online_reps': 4, 'edge_sampling_space': 'attention', 'symmetric_attention': False, 'fa_layer_edge_sampling_rmv': 0.8, 'gpu': 0, 'pos_enc_csv': False, 'pos_dist_quantile': 0.001, 'discritize_type': 'norm'}
-  device = "cpu"
+  device = "cuda"
   dataset = get_dataset(opt, '../data', False)
   dataset.data = dataset.data.to(device, non_blocking=True)
   print(type(dataset.data.x))
