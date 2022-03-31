@@ -187,7 +187,7 @@ def test_OGB(model, data, pos_encoding, opt):
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt,**best_opt}
-  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']}"
+  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} run: {opt['run_time']} block: {opt['block']}"
   wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
   wandb.config = opt
 
@@ -415,6 +415,7 @@ if __name__ == '__main__':
   parser.add_argument('--fa_layer_edge_sampling_rmv', type=float, default=0.8, help="percentage of edges to remove")
   parser.add_argument('--gpu', type=int, default=0, help="GPU to run on (default 0)")
   parser.add_argument('--pos_enc_csv', action='store_true', help="Generate pos encoding as a sparse CSV")
+  parser.add_argument('--run_time', default=1,type=int)
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
 
