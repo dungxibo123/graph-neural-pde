@@ -103,6 +103,7 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
   def __init__(self, opt, data, device):
     super().__init__(opt["hidden_dim"], opt, data, device)
     self.discritize_type = opt["discritize_type"]
+    self.norm_exp = opt["norm_exp"]
   def forward(self,x, pos_encoding=False):
 #    print(x.shape, " this is shape before doing anything")
     if self.opt['use_labels']:
@@ -139,11 +140,11 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     for i in range(len(self.mol_list)):
       if self.discritize_type=="norm":
 
-        out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)
+        out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp
         ####
 
-      elif self.discritize_type == "accumulate_norm":
-        out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, dim =(-1), keepdim=True) * torch.norm(x, dim = (-1), keepdim=True)
+      elif self.discritize_type == "frobenius_norm":
+        out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, keepdim=True)**self.norm_exp
       else:
         out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")

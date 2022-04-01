@@ -417,7 +417,7 @@ if __name__ == '__main__':
   parser.add_argument('--pos_enc_csv', action='store_true', help="Generate pos encoding as a sparse CSV")
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
-
+  parser.add_argument('--norm_exp',type=float, default=2.0)
 
   args = parser.parse_args()
 
