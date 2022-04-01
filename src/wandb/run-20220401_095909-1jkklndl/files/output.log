@@ -1,0 +1,71 @@
+
+Downloading http://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downloaded 0.08 GB:  95%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍       | 77/81 [01:41<00:07,  1.85s/it]
+Extracting ../data/ogbn-arxiv/arxiv.zip
+Loading necessary files...
+Downloaded 0.08 GB: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 81/81 [01:44<00:00,  1.29s/it]
+Processing...
+Processing graphs...
+Converting graphs into PyG objects...
+Saving...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 14217.98it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 6413.31it/s]
+Done!
+Traceback (most recent call last):
+  File "/home/cuongnq1/graph-neural-pde/src/run_grand_ex.py", line 427, in <module>
+    main(opt)
+  File "/home/cuongnq1/graph-neural-pde/src/run_grand_ex.py", line 210, in main
+    model = GrandExtendDiscritizedNet(opt, dataset, device).to(device)
+  File "/home/cuongnq1/graph-neural-pde/src/grand_discritized.py", line 104, in __init__
+    super().__init__(opt["hidden_dim"], opt, data, device)
+  File "/home/cuongnq1/graph-neural-pde/src/grand_discritized.py", line 84, in __init__
+    self.fa = get_full_adjacency(self.num_nodes).to(device)
+  File "/home/cuongnq1/graph-neural-pde/src/utils.py", line 162, in get_full_adjacency
+    edge_index = torch.zeros((2, num_nodes ** 2),dtype=torch.long)
+RuntimeError: [enforce fail at CPUAllocator.cpp:68] . DefaultCPUAllocator: can't allocate memory: you tried to allocate 458832826384 bytes. Error code 12 (Cannot allocate memory)

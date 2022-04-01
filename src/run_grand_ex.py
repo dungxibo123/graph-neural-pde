@@ -187,8 +187,13 @@ def test_OGB(model, data, pos_encoding, opt):
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt,**best_opt}
+<<<<<<< HEAD
   wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} run: {opt['run_time']} block: {opt['block']}"
   wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
+=======
+  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} run_time: {opt['run_time']} norm_exp: {opt['norm_exp']}"
+  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
+>>>>>>> 4d7d18e9cd87229747ef78d1cd2ed5afc648f0ae
   wandb.config = opt
 
   if cmd_opt['beltrami']:
@@ -295,7 +300,7 @@ if __name__ == '__main__':
 
   ### discritized param
   parser.add_argument('--depth', type=int, default=10, help='Default depth of the network')
-  parser.add_argument('--discritize_type', type=str, default="norm", help="norm or acc_norm")
+  parser.add_argument('--discritize_type', type=str, default="norm", help="norm or frobenius_norm")
 
 
   ################# end of discritized param
@@ -418,7 +423,7 @@ if __name__ == '__main__':
   parser.add_argument('--run_time', default=1,type=int)
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
-
+  parser.add_argument('--norm_exp',type=float, default=2.0)
 
   args = parser.parse_args()
 
