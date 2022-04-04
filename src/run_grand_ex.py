@@ -10,6 +10,7 @@ from ogb.nodeproppred import Evaluator
 from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
 from best_params import  best_params_dict
 from grand_discritized import GrandExtendDiscritizedNet
+import math
 
 
 import wandb
@@ -187,13 +188,13 @@ def test_OGB(model, data, pos_encoding, opt):
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt,**best_opt}
-<<<<<<< HEAD
-  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} run: {opt['run_time']} block: {opt['block']}"
-  wandb.init(project="Grand_Discritize", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
-=======
-  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} run_time: {opt['run_time']} norm_exp: {opt['norm_exp']}"
-  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=opt['dataset'])
->>>>>>> 4d7d18e9cd87229747ef78d1cd2ed5afc648f0ae
+  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} norm_exp: {opt['norm_exp']} run_time: {opt['run_time']} truncate_norm: {opt['truncate_norm']}"
+  if opt["truncate_norm"]:
+    group_name = f"{opt['dataset']}_truncate"
+  else:
+    group_name = opt['dataset']
+  #wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
+  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group="Testing")
   wandb.config = opt
 
   if cmd_opt['beltrami']:
@@ -262,6 +263,8 @@ def main(cmd_opt):
             'loss': loss
         }
     )
+		
+	
   print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(tmp_val_acc, tmp_test_acc,
                                                                                                      best_epoch,
                                                                                                      best_time))
@@ -420,11 +423,11 @@ if __name__ == '__main__':
   parser.add_argument('--fa_layer_edge_sampling_rmv', type=float, default=0.8, help="percentage of edges to remove")
   parser.add_argument('--gpu', type=int, default=0, help="GPU to run on (default 0)")
   parser.add_argument('--pos_enc_csv', action='store_true', help="Generate pos encoding as a sparse CSV")
-  parser.add_argument('--run_time', default=1,type=int)
+  parser.add_argument('--run_time', default="<OOV>",type=str)
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
   parser.add_argument('--norm_exp',type=float, default=2.0)
-
+  parser.add_argument('--truncate_norm', action='store_true')
   args = parser.parse_args()
 
   opt = vars(args)
