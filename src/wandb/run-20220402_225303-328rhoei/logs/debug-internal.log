@@ -1,0 +1,579 @@
+2022-04-02 22:53:04,204 INFO    MainThread:1055811 [internal.py:wandb_internal():92] W&B internal server running at pid: 1055811, started at: 2022-04-02 22:53:04.204026
+2022-04-02 22:53:04,209 INFO    WriterThread:1055811 [datastore.py:open_for_write():77] open: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/run-328rhoei.wandb
+2022-04-02 22:53:04,213 DEBUG   SenderThread:1055811 [sender.py:send():235] send: header
+2022-04-02 22:53:04,214 DEBUG   SenderThread:1055811 [sender.py:send():235] send: run
+2022-04-02 22:53:04,582 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: check_version
+2022-04-02 22:53:04,584 INFO    SenderThread:1055811 [dir_watcher.py:__init__():169] watching files in: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files
+2022-04-02 22:53:04,584 INFO    SenderThread:1055811 [sender.py:_start_run_threads():812] run started: 328rhoei with start time 1648914783
+2022-04-02 22:53:04,584 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:04,585 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:04,585 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: check_version
+2022-04-02 22:53:04,908 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: run_start
+2022-04-02 22:53:04,920 DEBUG   HandlerThread:1055811 [meta.py:__init__():37] meta init
+2022-04-02 22:53:04,920 DEBUG   HandlerThread:1055811 [meta.py:__init__():51] meta init done
+2022-04-02 22:53:04,921 DEBUG   HandlerThread:1055811 [meta.py:probe():211] probe
+2022-04-02 22:53:04,928 DEBUG   HandlerThread:1055811 [meta.py:_setup_git():201] setup git
+2022-04-02 22:53:04,947 DEBUG   HandlerThread:1055811 [meta.py:_setup_git():208] setup git done
+2022-04-02 22:53:04,948 DEBUG   HandlerThread:1055811 [meta.py:_save_pip():55] save pip
+2022-04-02 22:53:04,948 DEBUG   HandlerThread:1055811 [meta.py:_save_pip():69] save pip done
+2022-04-02 22:53:04,948 DEBUG   HandlerThread:1055811 [meta.py:_save_conda():76] save conda
+2022-04-02 22:53:05,588 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_created():217] file/dir created: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:05,589 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_created():217] file/dir created: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/conda-environment.yaml
+2022-04-02 22:53:05,590 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_created():217] file/dir created: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/requirements.txt
+2022-04-02 22:53:06,847 DEBUG   HandlerThread:1055811 [meta.py:_save_conda():86] save conda done
+2022-04-02 22:53:06,848 DEBUG   HandlerThread:1055811 [meta.py:probe():249] probe done
+2022-04-02 22:53:06,852 DEBUG   SenderThread:1055811 [sender.py:send():235] send: files
+2022-04-02 22:53:06,852 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-02 22:53:06,860 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-02 22:53:06,861 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: stop_status
+2022-04-02 22:53:07,180 DEBUG   SenderThread:1055811 [sender.py:send():235] send: telemetry
+2022-04-02 22:53:07,585 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/conda-environment.yaml
+2022-04-02 22:53:07,586 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_created():217] file/dir created: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-metadata.json
+2022-04-02 22:53:07,586 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_created():217] file/dir created: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:07,763 INFO    Thread-11 :1055811 [upload_job.py:push():137] Uploaded file /tmp/tmpiifiqancwandb/n2m8fapd-wandb-metadata.json
+2022-04-02 22:53:15,015 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,019 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,020 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,023 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,235 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,238 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,238 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,239 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,333 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,335 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,336 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,337 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,439 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,440 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,441 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,442 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,545 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,547 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,548 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,549 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,600 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:15,600 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:15,655 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,657 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,657 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,658 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,761 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,763 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,764 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,764 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,860 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,862 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,863 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,864 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:15,972 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:15,974 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:15,974 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:15,975 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,074 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,076 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,077 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,077 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,178 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,179 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,180 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,180 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,278 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,280 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,280 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,281 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,386 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,387 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,388 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,389 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,494 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,495 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,496 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,496 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,594 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,597 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,597 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,598 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,601 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:16,698 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,700 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,701 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,713 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,803 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,806 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,806 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,807 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:16,908 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:16,911 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:16,911 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:16,912 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,030 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,033 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,033 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,034 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,135 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,138 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,138 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,139 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,238 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,241 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,242 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,243 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,340 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,343 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,343 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,344 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,439 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,442 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,442 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,443 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,549 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,551 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,552 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,552 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,601 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:17,602 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:17,654 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,655 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,656 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,657 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,758 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,761 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,761 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,762 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,864 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,866 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,867 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,868 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:17,977 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:17,980 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:17,981 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:17,981 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,081 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,083 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,084 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,084 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,183 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,184 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,185 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,185 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,285 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,287 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,288 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,288 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,392 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,394 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,395 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,396 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,500 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,502 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,503 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,504 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,602 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:18,617 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,619 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,620 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,621 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,719 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,720 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,720 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,721 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,826 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,827 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,827 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,828 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:18,933 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:18,936 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:18,937 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:18,937 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,050 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,053 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,053 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,054 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,148 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,150 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,150 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,151 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,246 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,247 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,248 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,249 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,345 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,347 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,348 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,348 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,451 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,454 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,454 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,455 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,566 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,568 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,569 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,570 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,603 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:19,603 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:19,666 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,668 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,669 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,670 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,773 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,775 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,775 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,776 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,875 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,878 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,878 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,879 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:19,988 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:19,990 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:19,990 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:19,991 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,094 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,096 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,096 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,097 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,194 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,195 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,195 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,196 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,299 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,302 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,302 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,303 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,402 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,405 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,405 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,406 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,508 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,511 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,511 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,512 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,603 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:20,614 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,615 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,615 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,616 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,717 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,719 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,719 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,720 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,816 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,819 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,819 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,821 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:20,917 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:20,918 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:20,919 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:20,920 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,038 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,039 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,040 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,041 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,157 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,160 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,161 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,162 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,255 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,257 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,258 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,259 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,367 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,369 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,370 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,371 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,472 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,474 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,475 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,476 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,584 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,587 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,588 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,588 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,604 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:21,604 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:21,687 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,689 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,690 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,691 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,790 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,792 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,792 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,793 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:21,895 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:21,898 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:21,898 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:21,899 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,010 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,013 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,013 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,014 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,116 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,118 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,119 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,119 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,183 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-02 22:53:22,183 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: stop_status
+2022-04-02 22:53:22,218 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,318 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,422 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,509 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,510 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,511 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,511 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,511 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,512 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,512 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,512 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,513 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,524 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,525 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,525 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,526 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,604 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:22,632 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,634 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,635 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,636 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,741 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,743 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,743 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,744 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,849 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,852 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,852 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,852 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:22,954 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:22,957 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:22,957 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:22,961 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,071 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,074 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,074 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,075 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,188 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,190 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,191 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,191 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,292 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,294 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,294 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,295 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,397 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,399 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,400 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,401 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,518 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,520 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,521 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,521 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,605 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:23,605 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:23,620 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,623 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,623 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,624 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,725 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,727 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,728 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,729 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,828 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,830 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,831 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,832 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:23,931 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:23,933 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:23,934 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:23,935 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,039 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,041 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,042 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,043 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,143 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,145 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,145 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,146 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,245 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,248 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,248 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,249 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,344 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,347 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,347 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,348 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,447 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,449 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,449 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,450 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,558 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,561 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,561 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,562 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,605 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:24,670 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,673 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,673 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,674 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,767 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,769 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,769 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,770 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,873 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,874 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,874 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,875 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:24,979 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:24,981 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:24,981 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:24,982 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,093 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,095 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,096 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,097 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,201 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,203 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,204 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,204 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,310 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,313 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,313 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,314 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,416 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,419 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,419 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,420 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,524 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,525 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,526 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,527 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,606 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:25,607 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:25,621 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,625 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-02 22:53:25,625 DEBUG   SenderThread:1055811 [sender.py:send():235] send: history
+2022-04-02 22:53:25,626 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:25,627 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:25,627 DEBUG   SenderThread:1055811 [sender.py:send():235] send: telemetry
+2022-04-02 22:53:26,607 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:27,607 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:28,511 DEBUG   SenderThread:1055811 [sender.py:send():235] send: exit
+2022-04-02 22:53:28,512 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:28,512 INFO    SenderThread:1055811 [sender.py:send_exit():371] handling exit code: 0
+2022-04-02 22:53:28,512 INFO    SenderThread:1055811 [sender.py:send_exit():373] handling runtime: 23
+2022-04-02 22:53:28,513 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:28,514 INFO    SenderThread:1055811 [sender.py:send_exit():379] send defer
+2022-04-02 22:53:28,514 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:28,515 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,515 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 0
+2022-04-02 22:53:28,516 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,516 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-04-02 22:53:28,516 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 1
+2022-04-02 22:53:28,516 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,516 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 1
+2022-04-02 22:53:28,543 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,543 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-04-02 22:53:28,543 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 2
+2022-04-02 22:53:28,544 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,544 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 2
+2022-04-02 22:53:28,545 DEBUG   SenderThread:1055811 [sender.py:send():235] send: stats
+2022-04-02 22:53:28,546 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,546 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-04-02 22:53:28,546 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 3
+2022-04-02 22:53:28,547 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,547 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 3
+2022-04-02 22:53:28,547 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,547 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-04-02 22:53:28,547 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 4
+2022-04-02 22:53:28,548 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,548 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 4
+2022-04-02 22:53:28,548 DEBUG   SenderThread:1055811 [sender.py:send():235] send: summary
+2022-04-02 22:53:28,549 INFO    SenderThread:1055811 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-02 22:53:28,549 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,549 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-04-02 22:53:28,549 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 5
+2022-04-02 22:53:28,550 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,550 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 5
+2022-04-02 22:53:28,550 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,550 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-04-02 22:53:28,608 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:28,609 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:28,618 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:28,887 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 6
+2022-04-02 22:53:28,887 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:28,888 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:28,889 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 6
+2022-04-02 22:53:28,889 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:28,889 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-04-02 22:53:28,889 INFO    SenderThread:1055811 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-02 22:53:28,990 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:29,609 INFO    Thread-7  :1055811 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/config.yaml
+2022-04-02 22:53:29,610 INFO    SenderThread:1055811 [dir_watcher.py:finish():313] scan: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files
+2022-04-02 22:53:29,611 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/config.yaml config.yaml
+2022-04-02 22:53:29,611 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json wandb-summary.json
+2022-04-02 22:53:29,612 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/requirements.txt requirements.txt
+2022-04-02 22:53:29,613 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/conda-environment.yaml conda-environment.yaml
+2022-04-02 22:53:29,619 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-metadata.json wandb-metadata.json
+2022-04-02 22:53:29,619 INFO    SenderThread:1055811 [dir_watcher.py:finish():327] scan save: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log output.log
+2022-04-02 22:53:29,624 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 7
+2022-04-02 22:53:29,625 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:29,627 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:29,627 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 7
+2022-04-02 22:53:29,629 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:29,629 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-04-02 22:53:29,629 INFO    SenderThread:1055811 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-02 22:53:29,729 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:29,730 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:29,833 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:29,834 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:29,938 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:29,939 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,045 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,045 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,148 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,149 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,252 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,253 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,356 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,357 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,460 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,461 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,516 INFO    Thread-13 :1055811 [upload_job.py:push():137] Uploaded file /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/wandb-summary.json
+2022-04-02 22:53:30,516 INFO    Thread-16 :1055811 [upload_job.py:push():137] Uploaded file /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/output.log
+2022-04-02 22:53:30,517 INFO    Thread-12 :1055811 [upload_job.py:push():137] Uploaded file /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/config.yaml
+2022-04-02 22:53:30,553 INFO    Thread-14 :1055811 [upload_job.py:push():137] Uploaded file /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/requirements.txt
+2022-04-02 22:53:30,564 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,565 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,584 INFO    Thread-15 :1055811 [upload_job.py:push():137] Uploaded file /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/files/conda-environment.yaml
+2022-04-02 22:53:30,668 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,669 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,772 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:30,772 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:30,785 INFO    Thread-6  :1055811 [sender.py:transition_state():392] send defer: 8
+2022-04-02 22:53:30,786 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:30,786 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 8
+2022-04-02 22:53:30,786 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:30,786 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-04-02 22:53:30,876 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:31,571 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 9
+2022-04-02 22:53:31,572 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:31,573 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:31,573 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 9
+2022-04-02 22:53:31,573 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:31,574 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-04-02 22:53:31,574 INFO    SenderThread:1055811 [sender.py:transition_state():392] send defer: 10
+2022-04-02 22:53:31,575 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: defer
+2022-04-02 22:53:31,575 DEBUG   SenderThread:1055811 [sender.py:send():235] send: final
+2022-04-02 22:53:31,575 INFO    HandlerThread:1055811 [handler.py:handle_request_defer():164] handle defer: 10
+2022-04-02 22:53:31,575 DEBUG   SenderThread:1055811 [sender.py:send():235] send: footer
+2022-04-02 22:53:31,576 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: defer
+2022-04-02 22:53:31,576 INFO    SenderThread:1055811 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-04-02 22:53:31,675 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-02 22:53:31,676 DEBUG   SenderThread:1055811 [sender.py:send_request():249] send_request: poll_exit
+2022-04-02 22:53:31,676 INFO    SenderThread:1055811 [file_pusher.py:join():150] waiting for file pusher
+2022-04-02 22:53:32,414 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: sampled_history
+2022-04-02 22:53:32,419 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: get_summary
+2022-04-02 22:53:32,420 DEBUG   HandlerThread:1055811 [handler.py:handle_request():141] handle_request: shutdown
+2022-04-02 22:53:32,421 INFO    HandlerThread:1055811 [handler.py:finish():778] shutting down handler
+2022-04-02 22:53:32,575 INFO    WriterThread:1055811 [datastore.py:close():281] close: /home/cuongnq1/graph-neural-pde/src/wandb/run-20220402_225303-328rhoei/run-328rhoei.wandb
+2022-04-02 22:53:33,310 INFO    SenderThread:1055811 [sender.py:finish():1078] shutting down sender
+2022-04-02 22:53:33,311 INFO    SenderThread:1055811 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-02 22:53:33,311 INFO    SenderThread:1055811 [file_pusher.py:join():150] waiting for file pusher
+2022-04-02 22:53:33,315 INFO    MainThread:1055811 [internal.py:handle_exit():82] Internal process exited

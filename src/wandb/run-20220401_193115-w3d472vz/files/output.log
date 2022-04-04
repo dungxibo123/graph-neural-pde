@@ -1,0 +1,174 @@
+GrandExtendDiscritizedNet
+m1.weight
+torch.Size([128, 500])
+m1.bias
+torch.Size([128])
+m2.weight
+torch.Size([3, 128])
+m2.bias
+torch.Size([3])
+mol_list.0.alpha_train
+torch.Size([])
+mol_list.0.beta_train
+torch.Size([])
+mol_list.0.alpha_sc
+torch.Size([1])
+mol_list.0.beta_sc
+torch.Size([1])
+mol_list.0.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.0.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.0.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.0.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.0.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.0.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.0.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.0.multihead_att_layer.Wout.bias
+torch.Size([128])
+mol_list.1.alpha_train
+torch.Size([])
+mol_list.1.beta_train
+torch.Size([])
+mol_list.1.alpha_sc
+torch.Size([1])
+mol_list.1.beta_sc
+torch.Size([1])
+mol_list.1.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.1.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.1.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.1.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.1.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.1.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.1.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.1.multihead_att_layer.Wout.bias
+torch.Size([128])
+mol_list.2.alpha_train
+torch.Size([])
+mol_list.2.beta_train
+torch.Size([])
+mol_list.2.alpha_sc
+torch.Size([1])
+mol_list.2.beta_sc
+torch.Size([1])
+mol_list.2.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.2.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.2.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.2.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.2.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.2.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.2.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.2.multihead_att_layer.Wout.bias
+torch.Size([128])
+mol_list.3.alpha_train
+torch.Size([])
+mol_list.3.beta_train
+torch.Size([])
+mol_list.3.alpha_sc
+torch.Size([1])
+mol_list.3.beta_sc
+torch.Size([1])
+mol_list.3.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.3.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.3.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.3.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.3.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.3.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.3.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.3.multihead_att_layer.Wout.bias
+torch.Size([128])
+mol_list.4.alpha_train
+torch.Size([])
+mol_list.4.beta_train
+torch.Size([])
+mol_list.4.alpha_sc
+torch.Size([1])
+mol_list.4.beta_sc
+torch.Size([1])
+mol_list.4.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.4.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.4.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.4.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.4.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.4.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.4.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.4.multihead_att_layer.Wout.bias
+torch.Size([128])
+mol_list.5.alpha_train
+torch.Size([])
+mol_list.5.beta_train
+torch.Size([])
+mol_list.5.alpha_sc
+torch.Size([1])
+mol_list.5.beta_sc
+torch.Size([1])
+mol_list.5.multihead_att_layer.Q.weight
+torch.Size([16, 128])
+mol_list.5.multihead_att_layer.Q.bias
+torch.Size([16])
+mol_list.5.multihead_att_layer.V.weight
+torch.Size([16, 128])
+mol_list.5.multihead_att_layer.V.bias
+torch.Size([16])
+mol_list.5.multihead_att_layer.K.weight
+torch.Size([16, 128])
+mol_list.5.multihead_att_layer.K.bias
+torch.Size([16])
+mol_list.5.multihead_att_layer.Wout.weight
+torch.Size([128, 16])
+mol_list.5.multihead_att_layer.Wout.bias
+torch.Size([128])
+  0%|                                      | 0/600 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/cuongnq1/graph-neural-pde/src/run_grand_ex.py", line 427, in <module>
+    main(opt)
+  File "/home/cuongnq1/graph-neural-pde/src/run_grand_ex.py", line 232, in main
+    loss = train(model, optimizer, data, pos_encoding)
+  File "/home/cuongnq1/graph-neural-pde/src/run_grand_ex.py", line 68, in train
+    out = model(feat, pos_encoding)
+  File "/home/cuongnq1/anaconda3/envs/grand/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cuongnq1/graph-neural-pde/src/grand_discritized.py", line 146, in forward
+    out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp']
+  File "/home/cuongnq1/anaconda3/envs/grand/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cuongnq1/graph-neural-pde/src/grand_discritized.py", line 55, in forward
+    ax = self.multiply_attention(x, attention, values)
+  File "/home/cuongnq1/graph-neural-pde/src/grand_discritized.py", line 46, in multiply_attention
+    ax = torch_sparse.spmm(self.edge_index, mean_attention, x.shape[0], x.shape[0], x)
+  File "/home/cuongnq1/anaconda3/envs/grand/lib/python3.9/site-packages/torch_sparse/spmm.py", line 24, in spmm
+    out = matrix.index_select(-2, col)
+RuntimeError: CUDA out of memory. Tried to allocate 54.00 MiB (GPU 0; 22.20 GiB total capacity; 6.20 GiB already allocated; 15.06 MiB free; 6.27 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
