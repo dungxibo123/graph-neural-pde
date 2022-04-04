@@ -1,420 +1,64 @@
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Citeseer --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-06 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 4.0 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.0 --truncate_norm
+python3 run_grand_ex.py --dataset Citeseer --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 3.5 --run_time A10_FPT_Cloud_second --truncate_coeff 2.5 --truncate_norm

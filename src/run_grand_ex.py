@@ -11,7 +11,7 @@ from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
 from best_params import  best_params_dict
 from grand_discritized import GrandExtendDiscritizedNet
 import math
-
+import json
 
 import wandb
 
@@ -194,7 +194,8 @@ def main(cmd_opt):
   else:
     group_name = opt['dataset']
   #wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
-  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group="Testing")
+  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group="Testing", tags=[
+  opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"])
   wandb.config = opt
 
   if cmd_opt['beltrami']:
@@ -263,6 +264,17 @@ def main(cmd_opt):
             'loss': loss
         }
     )
+    if math.isnan(loss):
+      loss_nan_file = open(f"log/loss_nan_file_{opt['dataset']}.json", 'a')
+      loss_nan_file = json.load(loss_nan_file)
+      loss_nan_file[opt['dataset']].append({
+        'depth': opt['depth'],
+        'step_size': opt['step_size'],
+        'norm_exp': opt['norm_exp'],
+        'truncate_coeff': opt['truncate_coeff']
+      })
+
+        
 		
 	
   print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(tmp_val_acc, tmp_test_acc,
@@ -304,6 +316,9 @@ if __name__ == '__main__':
   ### discritized param
   parser.add_argument('--depth', type=int, default=10, help='Default depth of the network')
   parser.add_argument('--discritize_type', type=str, default="norm", help="norm or frobenius_norm")
+  parser.add_argument('--norm_exp',type=float, default=2.0)
+  parser.add_argument('--truncate_norm', action='store_true')
+  parser.add_argument('--truncate_coeff', type=float, default=1.0)
 
 
   ################# end of discritized param
@@ -426,8 +441,6 @@ if __name__ == '__main__':
   parser.add_argument('--run_time', default="<OOV>",type=str)
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
-  parser.add_argument('--norm_exp',type=float, default=2.0)
-  parser.add_argument('--truncate_norm', action='store_true')
   args = parser.parse_args()
 
   opt = vars(args)

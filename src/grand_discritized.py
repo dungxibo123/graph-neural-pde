@@ -81,7 +81,7 @@ class GrandDiscritizedNet(BaseGNN):
     self.data = data.data
     self.device = device
     self.data_edge_index = data.data.edge_index.to(device)
-    self.truncate_tensor = torch.Tensor([1.0]).to(device)
+    self.truncate_tensor = torch.Tensor([opt["truncate_coeff"]]).to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
     for id in range(opt["depth"]):
       self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device))
