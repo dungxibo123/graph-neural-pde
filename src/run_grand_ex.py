@@ -265,7 +265,7 @@ def main(cmd_opt):
         }
     )
     if math.isnan(loss):
-      loss_nan_file = open(f"log/loss_nan_file_{opt['dataset']}.json", 'a')
+      loss_nan_file = open(f"log/loss_nan_file.json", 'r')
       loss_nan_file = json.load(loss_nan_file)
       loss_nan_file[opt['dataset']].append({
         'depth': opt['depth'],
@@ -273,7 +273,7 @@ def main(cmd_opt):
         'norm_exp': opt['norm_exp'],
         'truncate_coeff': opt['truncate_coeff']
       })
-
+      return train_acc, val_acc, test_acc
         
 		
 	
