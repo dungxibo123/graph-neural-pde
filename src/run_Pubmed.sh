@@ -1,420 +1,90 @@
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 1 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 2 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 3 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 4 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 14 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 28 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 1e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 5e-05 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.0005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.001 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 0.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 1.5 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.0 --run_time A10_FPT_Cloud --truncate_norm
-python3 run_grand_ex.py --dataset Pubmed --depth 56 --step_size 0.005 --discritize_type frobenius_norm --norm_exp 2.5 --run_time A10_FPT_Cloud --truncate_norm
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 224 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.025 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.05 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.07500000000000001 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.1 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.125 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.15000000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.17500000000000002 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.2 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.04 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.05 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.07 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.1 --truncate_norm --post_group_name ex_08
+python3 run_grand_ex.py --dataset Pubmed --depth 336 --step_size 0.8921733 --discritize_type norm --norm_exp 0.225 --run_time A10_FPT_Cloud_second --truncate_coeff 0.12 --truncate_norm --post_group_name ex_08

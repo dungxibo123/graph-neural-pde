@@ -188,14 +188,14 @@ def test_OGB(model, data, pos_encoding, opt):
 def main(cmd_opt):
   best_opt = best_params_dict[cmd_opt['dataset']]
   opt = {**cmd_opt,**best_opt}
-  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} norm_exp: {opt['norm_exp']} run_time: {opt['run_time']} truncate_norm: {opt['truncate_norm']}"
+  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} norm_exp: {opt['norm_exp']} run_time: {opt['run_time']} truncate_norm: {opt['truncate_norm']} truncate_coeff: {opt['truncate_coeff']}"
   if opt["truncate_norm"]:
-    group_name = f"{opt['dataset']}_truncate"
+    group_name = f"{opt['dataset']}_truncate_{opt['post_group_name']}"
   else:
     group_name = opt['dataset']
+  tags = [opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"]
   #wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
-  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group="Testing", tags=[
-  opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"])
+  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name, tags=tags, job_type = str(opt["jt"]), reinit=True)
   wandb.config = opt
 
   if cmd_opt['beltrami']:
@@ -275,9 +275,9 @@ def main(cmd_opt):
       })
       return train_acc, val_acc, test_acc
         
-		
-	
-  print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(tmp_val_acc, tmp_test_acc,
+    
+  wandb.log({'best_val_acc': val_acc,'best_test_acc': test_acc}) 
+  print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(val_acc, test_acc,
                                                                                                      best_epoch,
                                                                                                      best_time))
   return train_acc, val_acc, test_acc
@@ -441,8 +441,12 @@ if __name__ == '__main__':
   parser.add_argument('--run_time', default="<OOV>",type=str)
 
   parser.add_argument('--pos_dist_quantile', type=float, default=0.001, help="percentage of N**2 edges to keep")
+  parser.add_argument('--post_group_name', type=str, default="")
   args = parser.parse_args()
 
   opt = vars(args)
-  print(opt["attention_type"])
-  main(opt)
+  NUM_RUNS=10
+  opt["jt"] = 0
+  for i in range(1, NUM_RUNS+1):
+    opt["jt"] = i
+    main(opt)

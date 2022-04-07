@@ -141,14 +141,14 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     for i in range(len(self.mol_list)):
       if self.opt['discritize_type']=="norm":
         if self.opt['truncate_norm']:	
-          out = out + self.step_size * self.mol_list[i](out) * torch.maximum(torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
         else:
           out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp']			
         ####
 		
       elif self.discritize_type == "frobenius_norm":
         if self.opt['truncate_norm']:
-          out = out + self.step_size * self.mol_list[i](out) * torch.maximum(torch.norm(out, keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
         else:
           out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, keepdim=True)**self.opt['norm_exp']
       else:
