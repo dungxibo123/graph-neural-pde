@@ -238,6 +238,11 @@ def main(cmd_opt):
 
     loss = train(model, optimizer, data, pos_encoding)
     tmp_train_acc, tmp_val_acc, tmp_test_acc = this_test(model, data, pos_encoding, opt)
+    if opt['learnable']:
+
+      step_size_at_step = model.step_size.data.item()
+      truncate_coeff_at_step = model.truncate_coeff.data.item()
+      norm_exp_at_step = model.norm_exp.data.item()
 
     best_time = opt['time']
     if tmp_val_acc > val_acc:
@@ -246,6 +251,10 @@ def main(cmd_opt):
       val_acc = tmp_val_acc
       test_acc = tmp_test_acc
       best_time = opt['time']
+      if opt['learnable']:
+        best_step_size = step_size_at_step
+        best_truncate_coeff = truncate_coeff_at_step
+        best_norm_exp = norm_exp_at_step
 #    if not opt['no_early'] and model.odeblock.test_integrator.solver.best_val > val_acc:
 #      best_epoch = epoch
 #      val_acc = model.odeblock.test_integrator.solver.best_val
@@ -262,8 +271,16 @@ def main(cmd_opt):
             'test_acc': tmp_test_acc,
             'val_acc': tmp_val_acc,
             'loss': loss
-        }
+        },
+        step = epoch
     )
+    if opt['learnable']:
+        
+      wandb.log({
+        'norm_exp': norm_exp_at_step,
+        'truncate_coeff': truncate_coeff_at_step,
+        'step_size': step_size_at_step
+    },step = epoch)
     if math.isnan(loss):
       loss_nan_file = open(f"log/loss_nan_file.json", 'r')
       loss_nan_file = json.load(loss_nan_file)
