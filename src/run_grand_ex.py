@@ -319,7 +319,9 @@ if __name__ == '__main__':
   parser.add_argument('--norm_exp',type=float, default=2.0)
   parser.add_argument('--truncate_norm', action='store_true')
   parser.add_argument('--truncate_coeff', type=float, default=1.0)
-
+  # Add a boolean argrument name learnable, type bool, default False
+  parser.add_argument('--learnable', dest='learnable', action='store_true') 
+  
 
   ################# end of discritized param
   parser.add_argument('--no_alpha_sigmoid', dest='no_alpha_sigmoid', action='store_true',

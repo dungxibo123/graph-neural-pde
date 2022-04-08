@@ -81,7 +81,12 @@ class GrandDiscritizedNet(BaseGNN):
     self.data = data.data
     self.device = device
     self.data_edge_index = data.data.edge_index.to(device)
-    self.truncate_tensor = torch.Tensor([opt["truncate_coeff"]]).to(device)
+    if opt['learnable']:
+      self.truncate_tensor = nn.Parameter(torch.Tensor([opt["truncate_coeff"]])).to(device)
+      self.norm_exp = nn.Parameter(torch.Tensor([opt["norm_exp"]])).to(device)
+    else:
+      self.truncate_tensor = torch.Tensor([opt["truncate_coeff"]]).to(device)
+      self.norm_exp = torch.Tensor([opt["norm_exp"]]).to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
     for id in range(opt["depth"]):
       self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device))
@@ -141,16 +146,16 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     for i in range(len(self.mol_list)):
       if self.opt['discritize_type']=="norm":
         if self.opt['truncate_norm']:	
-          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp, self.truncate_tensor)
         else:
-          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.opt['norm_exp']			
+          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp			
         ####
 		
       elif self.discritize_type == "frobenius_norm":
         if self.opt['truncate_norm']:
-          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.opt['norm_exp'], self.truncate_tensor)
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.norm_exp, self.truncate_tensor)
         else:
-          out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, keepdim=True)**self.opt['norm_exp']
+          out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, keepdim=True)**self.norm_exp
       else:
         out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")
