@@ -194,6 +194,82 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
     #print(torch.norm(x, dim=(-1)))
     
 
+class GrandExtendDiscritizedNet_KNN(GrandDiscritizedNet):
+  def __init__(self, opt, dataset, device):
+    super(GrandExtendDiscritizedNet_KNN).__init__(opt,dataset, device)
+  def forward(self, x, pos_encoding):
+#    print(x.shape, " this is shape before doing anything")
+    if self.opt['use_labels']:
+      y = x[:, -self.num_classes:]
+      x = x[:, :-self.num_classes]
+    if self.opt['beltrami']:
+      x = F.dropout(x, self.opt['input_dropout'], training=self.training)
+      x = self.mx(x)
+      p = F.dropout(pos_encoding, self.opt['input_dropout'], training=self.training)
+      p = self.mp(p)
+      x = torch.cat([x, p], dim=1)
+    else:
+      x = F.dropout(x, self.opt['input_dropout'], training=self.training)
+      x = self.m1(x)
+
+    if self.opt['use_mlp']:
+      x = F.dropout(x, self.opt['dropout'], training=self.training)
+      x = F.dropout(x + self.m11(F.relu(x)), self.opt['dropout'], training=self.training)
+      x = F.dropout(x + self.m12(F.relu(x)), self.opt['dropout'], training=self.training)
+    # todo investigate if some input non-linearity solves the problem with smooth deformations identified in the ANODE paper
+
+    if self.opt['use_labels']:
+      x = torch.cat([x, y], dim=-1)
+
+    if self.opt['batch_norm']:
+      x = self.bn_in(x)
+
+    # Solve the initial value problem of the ODE.
+    if self.opt['augment']:
+      c_aux = torch.zeros(x.shape).to(self.device)
+      x = torch.cat([x, c_aux], dim=1)
+    out = x
+#    print(f"This is the output shape before forward those Blocks: {x.shape}")
+    for i in range(len(self.mol_list)):
+      if self.opt['discritize_type']=="norm":
+        if self.opt['truncate_norm']:	
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp, self.truncate)
+        else:
+          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp			
+        ####
+		
+      elif self.discritize_type == "frobenius_norm":
+        if self.opt['truncate_norm']:
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.norm_exp, self.truncate_tensor)
+        else:
+          out = out + self.mol_list[i](out) * self.step_size * torch.norm(out, keepdim=True)**self.norm_exp
+      elif self.discritized_type == "mm_regular":
+        out = out + self.step_size * self.mol_list[i](out) * ((out) / torch.sum(out))
+      elif self.discritized_type == "softmax":
+        out = out + self.step_size * self.mol_list[i](out) * torch.exp(out) / torch.sum(torch.exp(out))
+      else:
+        out = out + self.step_size * self.mol_list[i](out)
+#      print(f"After layers number {i+1}")
+    z = out
+    if self.opt['fa_layer']:
+      #self.edge_index = add_edges(self, self.opt)  
+      pass
+    if self.opt['augment']:
+      z = torch.split(z, x.shape[1] // 2, dim=1)[0]
+
+    # Activation.
+    z = F.relu(z)
+
+    if self.opt['fc_out']:
+      z = self.fc(z)
+      z = F.relu(z)
+
+    # Dropout.
+    z = F.dropout(z, self.opt['dropout'], training=self.training)
+
+    # Decode each node embedding to get node label.
+    z = self.m2(z)
+    return z
 
 ######################################################33
 if __name__ == "__main__":

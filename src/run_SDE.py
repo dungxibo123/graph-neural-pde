@@ -12,6 +12,8 @@ from data import get_dataset, set_train_val_test_split
 from ogb.nodeproppred import Evaluator
 from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
 from best_params import  best_params_dict
+import wandb
+import tqdm
 
 
 def get_optimizer(name, parameters, lr, weight_decay=0):
@@ -182,11 +184,19 @@ def test_OGB(model, data, pos_encoding, opt):
 
 def main(cmd_opt):
   try:
+
     best_opt = best_params_dict[cmd_opt['dataset']]
     opt = {**cmd_opt, **best_opt}
-    merge_cmd_args(cmd_opt,opt)
+    opt = merge_cmd_args(cmd_opt, opt)
   except KeyError:
     opt = cmd_opt
+  wandb_name = f"time: {opt['time']}"
+  group_name = opt['dataset']
+  tags = [opt['dataset'], opt['time']]
+  #wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
+  if not opt['experiment']:
+    wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name, tags=tags, job_type = str(opt["jt"]), reinit=True)
+    wandb.config = opt
 
   if cmd_opt['beltrami']:
     opt['beltrami'] = True
@@ -203,7 +213,7 @@ def main(cmd_opt):
   if opt['rewire_KNN'] or opt['fa_layer']:
     model = GNN_KNN(opt, dataset, device).to(device) if opt["no_early"] else GNNKNNEarly(opt, dataset, device).to(device)
   else:
-    model = GNN(opt, dataset, device).to(device) if opt["no_early"] else GNNEarly(opt, dataset, device).to(device)
+    model = GrandSDE(opt, dataset, device).to(device) if opt["no_early"] else GNNEarly(opt, dataset, device).to(device)
 
   if not opt['planetoid_split'] and opt['dataset'] in ['Cora','Citeseer','Pubmed']:
     dataset.data = set_train_val_test_split(np.random.randint(0, 1000), dataset.data, num_development=5000 if opt["dataset"] == "CoauthorCS" else 1500)
@@ -217,9 +227,9 @@ def main(cmd_opt):
 
   this_test = test_OGB if opt['dataset'] == 'ogbn-arxiv' else test
 
-  for epoch in range(1, opt['epoch']):
+  for epoch in tqdm.tqdm(range(1, opt['epoch'])):
     start_time = time.time()
-
+    print("DEBUG***************************11111")
     if opt['rewire_KNN'] and epoch % opt['rewire_KNN_epoch'] == 0 and epoch != 0:
       ei = apply_KNN(data, pos_encoding, model, opt)
       model.odeblock.odefunc.edge_index = ei
@@ -399,7 +409,7 @@ if __name__ == '__main__':
 
   parser.add_argument('--depth', type=int, default=10)
   parser.add_argument('--discritize_type', type=str, default="norm")
-  parser.add_argument('--experiment', action='store_false', help='run exp')
+  parser.add_argument('--experiment', action='store_false')
   args = parser.parse_args()
 
   opt = vars(args)
