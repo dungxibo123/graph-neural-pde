@@ -49,3 +49,5 @@ class LaplacianODEFunc(ODEFunc):
     if self.opt['add_source']:
       f = f + self.beta_train * self.x0
     return f
+  def forwardg(self, t, x):
+    return self.forward(t,x).unsqueeze(-1)
