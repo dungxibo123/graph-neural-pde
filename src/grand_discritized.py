@@ -72,7 +72,6 @@ class GrandDiscritizedNet(BaseGNN):
   def __init__(self, hidden_dim, opt, data, device):
     super(GrandDiscritizedNet, self).__init__(opt, data, device)
 #    opt["add_source"] = True
-    self.step_size = torch.Tensor([opt["step_size"]]).to(device)
     self.mol_list = nn.ModuleList()
     self.mol_list.append(
         GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device)
@@ -81,12 +80,6 @@ class GrandDiscritizedNet(BaseGNN):
     self.data = data.data
     self.device = device
     self.data_edge_index = data.data.edge_index.to(device)
-    if opt['learnable']:
-      self.truncate_tensor = nn.Parameter(torch.Tensor([opt["truncate_coeff"]])).to(device)
-      self.norm_exp = nn.Parameter(torch.Tensor([opt["norm_exp"]])).to(device)
-    else:
-      self.truncate_tensor = torch.Tensor([opt["truncate_coeff"]]).to(device)
-      self.norm_exp = torch.Tensor([opt["norm_exp"]]).to(device)
     self.fa = get_full_adjacency(self.num_nodes).to(device)
     for id in range(opt["depth"]):
       self.mol_list.append(GrandDiscritizedBlock(opt["hidden_dim"], hidden_dim, opt, data, device).to(device))
@@ -109,6 +102,26 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
   def __init__(self, opt, data, device):
     super().__init__(opt["hidden_dim"], opt, data, device)
     self.discritize_type = opt["discritize_type"]
+    self.truncate_tensor = torch.Tensor([opt["truncate_coeff"]]).to(device)
+    self.norm_exp = torch.Tensor([opt["norm_exp"]]).to(device)
+    if opt['learnable']:
+      print(" --> Creating the Custom Parameters\n")
+#      _truncate_tensor = nn.Parameter(torch.Tensor([opt["truncate_coeff"]]), requires_grad = True)
+#      _norm_exp = nn.Parameter(torch.Tensor([opt["norm_exp"]]), requires_grad = True)
+      _step_size = nn.Parameter(torch.Tensor([opt["step_size"]]), requires_grad = True)
+#      self.register_parameter("truncate_tensor",_truncate_tensor)
+#      self.register_parameter("norm_exp", _norm_exp)
+      self.register_parameter("step_size", _step_size)
+      """
+      self.norm_exp = self.norm_exp.to(device)
+      self.step_size = self.step_size.to(device)
+      self.truncate_tensor = self.truncate_tensor.to(device)
+      """
+      print(self.norm_exp, self.step_size, self.truncate_tensor, sep="\n\n\n")
+      print(" --> Parameter was initialize can be learn\n")
+      print(f"{self.truncate_tensor}\n{self.norm_exp}\n{self.step_size}\n")
+    else:
+      self.step_size = torch.Tensor([opt["step_size"]]).to(device)
     self.opt = opt
   def forward(self,x, pos_encoding=False):
 #    print(x.shape, " this is shape before doing anything")
