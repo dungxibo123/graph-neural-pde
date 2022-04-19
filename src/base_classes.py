@@ -34,7 +34,7 @@ class ODEblock(nn.Module):
     super(ODEblock, self).__init__()
     self.opt = opt
     self.t = t
-    
+    self.noise_scale = opt["noise_scale"]    
     self.aug_dim = 2 if opt['augment'] else 1
     self.odefunc = odefunc(self.aug_dim * opt['hidden_dim'], self.aug_dim * opt['hidden_dim'], opt, data, device)
     

@@ -14,6 +14,31 @@ from graph_rewiring import apply_KNN, apply_beltrami, apply_edge_sampling
 from best_params import  best_params_dict
 import wandb
 import tqdm
+############################################################3
+
+def merge_cmd_args(cmd_opt, opt):
+  if cmd_opt['beltrami']:
+    opt['beltrami'] = True
+  if cmd_opt['function'] is not None:
+    opt['function'] = cmd_opt['function']
+  if cmd_opt['block'] is not None:
+    opt['block'] = cmd_opt['block']
+  if cmd_opt['attention_type'] != 'scaled_dot':
+    opt['attention_type'] = cmd_opt['attention_type']
+  if cmd_opt['self_loop_weight'] is not None:
+    opt['self_loop_weight'] = cmd_opt['self_loop_weight']
+  if cmd_opt['method'] is not None:
+    opt['method'] = cmd_opt['method']
+  if cmd_opt['step_size'] != 1:
+    opt['step_size'] = cmd_opt['step_size']
+  if cmd_opt['time'] != 1:
+    opt['time'] = cmd_opt['time']
+  if cmd_opt['epoch'] != 100:
+    opt['epoch'] = cmd_opt['epoch']
+  if not cmd_opt['not_lcc']:
+    opt['not_lcc'] = False
+  if cmd_opt['num_splits'] != 1:
+    opt['num_splits'] = cmd_opt['num_splits']
 
 
 def get_optimizer(name, parameters, lr, weight_decay=0):
@@ -409,7 +434,8 @@ if __name__ == '__main__':
 
   parser.add_argument('--depth', type=int, default=10)
   parser.add_argument('--discritize_type', type=str, default="norm")
-  parser.add_argument('--experiment', action='store_false')
+  parser.add_argument('--experiment', action='store_true')
+  parser.add_argument('--noise_scale', type=float, default=0.2)
   args = parser.parse_args()
 
   opt = vars(args)

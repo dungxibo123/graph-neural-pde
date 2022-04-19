@@ -52,7 +52,7 @@ class ODEFuncTransformerAtt(ODEFunc):
       f = f + self.beta_train * self.x0
     return f
   def forwardg(self, t, x):
-    return self.forward(t,x).unsqueeze(-1)   
+    return self.noise_scale * self.forward(t,x).unsqueeze(-1)   
 
   def __repr__(self):
     return self.__class__.__name__ + ' (' + str(self.in_features) + ' -> ' + str(self.out_features) + ')'

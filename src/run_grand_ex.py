@@ -221,7 +221,11 @@ def main(cmd_opt):
 
   data = dataset.data.to(device)
 
-  parameters = [p for p in model.parameters() if p.requires_grad]
+  parameters = [p for _,p in list(model.named_parameters()) if p.requires_grad]
+  for named, param in list(model.named_parameters()):
+    print(named,sep="\n")
+  print("\n\n\n\n\n\n\n\n\n\n\n")
+  #input()
   print_model_params(model)
   optimizer = get_optimizer(opt['optimizer'], parameters, lr=opt['lr'], weight_decay=opt['decay'])
   best_time = best_epoch = train_acc = val_acc = test_acc = 0
@@ -241,7 +245,7 @@ def main(cmd_opt):
     if opt['learnable']:
 
       step_size_at_step = model.step_size.data.item()
-      truncate_coeff_at_step = model.truncate_coeff.data.item()
+      truncate_coeff_at_step = model.truncate_tensor.data.item()
       norm_exp_at_step = model.norm_exp.data.item()
 
     best_time = opt['time']
@@ -262,9 +266,11 @@ def main(cmd_opt):
 #      train_acc = model.odeblock.test_integrator.solver.best_train
 #      best_time = model.odeblock.test_integrator.solver.best_time
 
-    log = 'Epoch: {:03d}, Runtime {:03f}, Loss {:03f}, Train: {:.4f}, Val: {:.4f}, Test: {:.4f}, Best time: {:.4f}'
-
-    print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, best_time))
+    log = 'Epoch: {:03d}, Runtime {:03f}, Loss {:03f}, Train: {:.4f}, Val: {:.4f}, Test: {:.4f}, Step: {:.4f}, alpha: {:.4f}, truncate: {:.4f}'
+    if opt['learnable']:
+      print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, step_size_at_step, norm_exp_at_step, truncate_coeff_at_step))
+    else:
+      print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, opt['step_size'], opt['norm_exp'], opt['truncate_coeff']))
     wandb.log(
         {
             'train_acc': tmp_train_acc,
@@ -337,7 +343,7 @@ if __name__ == '__main__':
   parser.add_argument('--truncate_norm', action='store_true')
   parser.add_argument('--truncate_coeff', type=float, default=1.0)
   # Add a boolean argrument name learnable, type bool, default False
-  parser.add_argument('--learnable', dest='learnable', action='store_true') 
+  parser.add_argument('--learnable', action='store_true') 
   
 
   ################# end of discritized param

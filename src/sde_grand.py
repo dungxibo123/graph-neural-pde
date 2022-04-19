@@ -25,6 +25,8 @@ class AttSDEblock(AttODEblock):
     self.reg_odefunc.noise_type = "general"
     self.odefunc.sde_type = "ito"
     self.reg_odefunc.noise_type = "ito"
+    self.odefunc.noise_scale = opt["noise_scale"]
+    self.reg_odefunc.noise_scale = opt["noise_scale"]
 
   def forward(self, x):
     t = self.t.type_as(x)
