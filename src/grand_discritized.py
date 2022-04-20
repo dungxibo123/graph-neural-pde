@@ -181,7 +181,7 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
           os.makedir("img")
         except:
           pass
-        plt.savefig('img/Afters_{i + 1}_layers.pdf', 
+        plt.savefig(f'img/Afters_{i + 1}_layers.pdf', 
            dpi=300)
     z = out
     if self.opt['augment']:
