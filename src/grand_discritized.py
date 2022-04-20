@@ -14,7 +14,9 @@ from data import get_dataset
 from utils import MaxNFEException, squareplus
 from base_classes import ODEFunc
 import wandb
-
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set()
 
 class GrandDiscritizedBlock(ODEFunc):
 
@@ -172,6 +174,15 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
       else:
         out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")
+      if i % 5 == 0:
+        fig = sns.heatmap(torch.corrcoef(out[:30,:]).cpu().detach().numpy())
+        fig.set(xlabel=f"Correlation after {i + 1} layers")
+        try:
+          os.makedir("img")
+        except:
+          pass
+        plt.savefig('img/Afters_{i + 1}_layers.pdf', 
+           dpi=300)
     z = out
     if self.opt['augment']:
       z = torch.split(z, x.shape[1] // 2, dim=1)[0]

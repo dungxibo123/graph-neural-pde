@@ -183,20 +183,50 @@ def test_OGB(model, data, pos_encoding, opt):
   })['acc']
 
   return train_acc, valid_acc, test_acc
+  
 
+def merge_cmd_args(cmd_opt, opt):
+  if cmd_opt['beltrami']:
+    opt['beltrami'] = True
+  if cmd_opt['function'] is not None:
+    opt['function'] = cmd_opt['function']
+  if cmd_opt['block'] is not None:
+    opt['block'] = cmd_opt['block']
+  if cmd_opt['attention_type'] != 'scaled_dot':
+    opt['attention_type'] = cmd_opt['attention_type']
+  if cmd_opt['self_loop_weight'] is not None:
+    opt['self_loop_weight'] = cmd_opt['self_loop_weight']
+  if cmd_opt['method'] is not None:
+    opt['method'] = cmd_opt['method']
+  if cmd_opt['step_size'] != 1:
+    opt['step_size'] = cmd_opt['step_size']
+  if cmd_opt['time'] != 1:
+    opt['time'] = cmd_opt['time']
+  if cmd_opt['epoch'] != 100:
+    opt['epoch'] = cmd_opt['epoch']
+  if not cmd_opt['not_lcc']:
+    opt['not_lcc'] = False
+  if cmd_opt['num_splits'] != 1:
+    opt['num_splits'] = cmd_opt['num_splits']
 
 def main(cmd_opt):
-  best_opt = best_params_dict[cmd_opt['dataset']]
-  opt = {**cmd_opt,**best_opt}
-  wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} norm_exp: {opt['norm_exp']} run_time: {opt['run_time']} truncate_norm: {opt['truncate_norm']} truncate_coeff: {opt['truncate_coeff']}"
-  if opt["truncate_norm"]:
-    group_name = f"{opt['dataset']}_truncate_{opt['post_group_name']}"
-  else:
-    group_name = opt['dataset']
-  tags = [opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"]
-  #wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
-  wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name, tags=tags, job_type = str(opt["jt"]), reinit=True)
-  wandb.config = opt
+  try:
+
+    best_opt = best_params_dict[cmd_opt['dataset']]
+    opt = {**cmd_opt, **best_opt}
+    opt = merge_cmd_args(cmd_opt, opt)
+  except KeyError:
+    opt = cmd_opt
+  if not opt['experiment']:
+    wandb_name = f"step: {opt['step_size']} type: {opt['discritize_type']} depth: {opt['depth']} norm_exp: {opt['norm_exp']} run_time: {opt['run_time']} truncate_norm: {opt['truncate_norm']} truncate_coeff: {opt['truncate_coeff']}"
+    if opt["truncate_norm"]:
+      group_name = f"{opt['dataset']}_truncate_{opt['post_group_name']}"
+    else:
+      group_name = opt['dataset']
+      tags = [opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"]
+  #######wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
+    wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name, tags=tags, job_type = str(opt["jt"]), reinit=True)
+    wandb.config = opt
 
   if cmd_opt['beltrami']:
     opt['beltrami'] = True
@@ -222,9 +252,6 @@ def main(cmd_opt):
   data = dataset.data.to(device)
 
   parameters = [p for _,p in list(model.named_parameters()) if p.requires_grad]
-  for named, param in list(model.named_parameters()):
-    print(named,sep="\n")
-  print("\n\n\n\n\n\n\n\n\n\n\n")
   #input()
   print_model_params(model)
   optimizer = get_optimizer(opt['optimizer'], parameters, lr=opt['lr'], weight_decay=opt['decay'])
@@ -335,7 +362,7 @@ if __name__ == '__main__':
   parser.add_argument('--alpha', type=float, default=0.8, help='Factor in front matrix A.')
   parser.add_argument('--alpha_dim', type=str, default='sc', help='choose either scalar (sc) or vector (vc) alpha')
 
-
+  parser.add_argument('--experiment',action='store_true')
   ### discritized param
   parser.add_argument('--depth', type=int, default=10, help='Default depth of the network')
   parser.add_argument('--discritize_type', type=str, default="norm", help="norm or frobenius_norm")

@@ -2,7 +2,7 @@
 
 datasets = ["Cora", "Citeseer","Pubmed", "CoauthorCS"]
 depths = [567,678,789]
-step_sizes = [0.92122304]
+step_sizes = [0.93122304]
 norm_types = ["norm"]
 alphas = [0.0173192*i for i in range(3,14)]
 truncate_coeffs = [0.03]
