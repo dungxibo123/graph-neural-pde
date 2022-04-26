@@ -16,6 +16,9 @@ from base_classes import ODEFunc
 import wandb
 import seaborn as sns
 import matplotlib.pyplot as plt
+import time
+import argparse
+import uuid
 sns.set()
 
 class GrandDiscritizedBlock(ODEFunc):
@@ -160,12 +163,12 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
 #    print(f"This is the output shape before forward those Blocks: {x.shape}")
     for i in range(len(self.mol_list)):
       if self.opt['discritize_type']=="norm":
-        if self.opt['truncate_norm']:	
-          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp, self.truncate_tensor)
+        if self.opt['truncate_norm']:  
+          out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(0), keepdim=True)**self.norm_exp, self.truncate_tensor)
         else:
-          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp			
+          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(0), keepdim=True)**self.norm_exp      
         ####
-		
+    
       elif self.discritize_type == "frobenius_norm":
         if self.opt['truncate_norm']:
           out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.norm_exp, self.truncate_tensor)
@@ -174,15 +177,19 @@ class GrandExtendDiscritizedNet(GrandDiscritizedNet):
       else:
         out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")
-      if i % 5 == 0:
-        fig = sns.heatmap(torch.corrcoef(out[:30,:]).cpu().detach().numpy())
-        fig.set(xlabel=f"Correlation after {i + 1} layers")
-        try:
-          os.makedir("img")
-        except:
-          pass
-        plt.savefig(f'img/Afters_{i + 1}_layers.pdf', 
-           dpi=300)
+    """
+    with torch.no_grad():
+      t = time.time()
+      tmp = out[:1200:40,:]
+      corre = torch.corrcoef(tmp)
+      corre = corre.cpu().detach().numpy()
+      
+      fig = sns.heatmap(corre, vmin=0.0, vmax=1.0).get_figure()
+      #fig.set(xlabel=f"Correlation after {i + 1} layers")
+      plt.savefig(f"img/Afters_{self.opt['depth']}_layers_{self.opt['dataset']}_{self.opt['step_size']}.pdf")
+      plt.clf()
+    """
+      
     z = out
     if self.opt['augment']:
       z = torch.split(z, x.shape[1] // 2, dim=1)[0]
@@ -243,12 +250,12 @@ class GrandExtendDiscritizedNet_KNN(GrandDiscritizedNet):
 #    print(f"This is the output shape before forward those Blocks: {x.shape}")
     for i in range(len(self.mol_list)):
       if self.opt['discritize_type']=="norm":
-        if self.opt['truncate_norm']:	
+        if self.opt['truncate_norm']:  
           out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp, self.truncate)
         else:
-          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp			
+          out = out + self.step_size * self.mol_list[i](out) * torch.norm(out, dim=(-1), keepdim=True)**self.norm_exp      
         ####
-		
+    
       elif self.discritize_type == "frobenius_norm":
         if self.opt['truncate_norm']:
           out = out + self.step_size * self.mol_list[i](out) * torch.minimum(torch.norm(out, keepdim=True)**self.norm_exp, self.truncate_tensor)
@@ -261,6 +268,14 @@ class GrandExtendDiscritizedNet_KNN(GrandDiscritizedNet):
       else:
         out = out + self.step_size * self.mol_list[i](out)
 #      print(f"After layers number {i+1}")
+    with torch.no_grad():
+      corre = torch.corrcoef(out)
+      corre = corre.cpu().detach().numpy()
+      hm = sns.heatmap(corre, vmin=0.0, vmax=1.0)
+      fig = hm.get_figure()
+      t = time.time()
+      plt.savefig(f"img/depth_{opt['depth']}_{opt['dataset']}.pdf")
+      print(f"Successfully update the file in img folder with {time.time()-t} seconds")
     z = out
     if self.opt['fa_layer']:
       #self.edge_index = add_edges(self, self.opt)  
@@ -284,14 +299,19 @@ class GrandExtendDiscritizedNet_KNN(GrandDiscritizedNet):
 
 ######################################################33
 if __name__ == "__main__":
-  
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--depth", default=0, type=int)
+  parser.add_argument("--step_size", default=1, type=float)
+  args = parser.parse_args()
   print(f"Test the grand_discritized file")
-  opt = {'depth': 5,'use_cora_defaults': False, 'dataset': 'Cora', 'data_norm': 'rw', 'self_loop_weight': 1.0, 'use_labels': False, 'geom_gcn_splits': False, 'num_splits': 1, 'label_rate': 0.5, 'planetoid_split': False, 'hidden_dim': 16, 'fc_out': False, 'input_dropout': 0.5, 'dropout': 0.0, 'batch_norm': False, 'optimizer': 'adam', 'lr': 0.01, 'decay': 0.0005, 'epoch': 100, 'alpha': 1.0, 'alpha_dim': 'sc', 'no_alpha_sigmoid': False, 'beta_dim': 'sc', 'block': 'constant', 'function': 'laplacian', 'use_mlp': False, 'add_source': False, 'cgnn': False, 'time': 1.0, 'augment': False, 'method': None, 'step_size': 1, 'max_iters': 100, 'adjoint_method': 'adaptive_heun', 'adjoint': False, 'adjoint_step_size': 1, 'tol_scale': 1.0, 'tol_scale_adjoint': 1.0, 'ode_blocks': 1, 'max_nfe': 1000, 'no_early': False, 'earlystopxT': 3, 'max_test_steps': 100, 'leaky_relu_slope': 0.2, 'attention_dropout': 0.0, 'heads': 4, 'attention_norm_idx': 0, 'attention_dim': 64, 'mix_features': False, 'reweight_attention': False, 'attention_type': 'scaled_dot', 'square_plus': False, 'jacobian_norm2': None, 'total_deriv': None, 'kinetic_energy': None, 'directional_penalty': None, 'not_lcc': True, 'rewiring': None, 'gdc_method': 'ppr', 'gdc_sparsification': 'topk', 'gdc_k': 64, 'gdc_threshold': 0.0001, 'gdc_avg_degree': 64, 'ppr_alpha': 0.05, 'heat_time': 3.0, 'att_samp_pct': 1, 'use_flux': False, 'exact': False, 'M_nodes': 64, 'new_edges': 'random', 'sparsify': 'S_hat', 'threshold_type': 'topk_adj', 'rw_addD': 0.02, 'rw_rmvR': 0.02, 'rewire_KNN': False, 'rewire_KNN_T': 'T0', 'rewire_KNN_epoch': 5, 'rewire_KNN_k': 64, 'rewire_KNN_sym': False, 'KNN_online': False, 'KNN_online_reps': 4, 'KNN_space': 'pos_distance', 'beltrami': False, 'fa_layer': False, 'pos_enc_type': 'DW64', 'pos_enc_orientation': 'row', 'feat_hidden_dim': 64, 'pos_enc_hidden_dim': 32, 'edge_sampling': False, 'edge_sampling_T': 'T0', 'edge_sampling_epoch': 5, 'edge_sampling_add': 0.64, 'edge_sampling_add_type': 'importance', 'edge_sampling_rmv': 0.32, 'edge_sampling_sym': False, 'edge_sampling_online': False, 'edge_sampling_online_reps': 4, 'edge_sampling_space': 'attention', 'symmetric_attention': False, 'fa_layer_edge_sampling_rmv': 0.8, 'gpu': 0, 'pos_enc_csv': False, 'pos_dist_quantile': 0.001, 'discritize_type': 'norm'}
+  opt = {'depth': 5,'use_cora_defaults': False, 'dataset': 'CoauthorCS', 'data_norm': 'rw', 'self_loop_weight': 1.0, 'use_labels': False, 'geom_gcn_splits': False, 'num_splits': 1, 'label_rate': 0.5, 'planetoid_split': False, 'hidden_dim': 16, 'fc_out': False, 'input_dropout': 0.5, 'dropout': 0.0, 'batch_norm': False, 'optimizer': 'adam', 'lr': 0.01, 'decay': 0.0005, 'epoch': 100, 'alpha': 1.0, 'alpha_dim': 'sc', 'no_alpha_sigmoid': False, 'beta_dim': 'sc', 'block': 'constant', 'function': 'laplacian', 'use_mlp': False, 'add_source': False, 'cgnn': False, 'time': 1.0, 'augment': False, 'method': None, 'step_size': 1, 'max_iters': 100, 'adjoint_method': 'adaptive_heun', 'adjoint': False, 'adjoint_step_size': 1, 'tol_scale': 1.0, 'tol_scale_adjoint': 1.0, 'ode_blocks': 1, 'max_nfe': 1000, 'no_early': False, 'earlystopxT': 3, 'max_test_steps': 100, 'leaky_relu_slope': 0.2, 'attention_dropout': 0.0, 'heads': 4, 'attention_norm_idx': 0, 'attention_dim': 64, 'mix_features': False, 'reweight_attention': False, 'attention_type': 'scaled_dot', 'square_plus': False, 'jacobian_norm2': None, 'total_deriv': None, 'kinetic_energy': None, 'directional_penalty': None, 'not_lcc': True, 'rewiring': None, 'gdc_method': 'ppr', 'gdc_sparsification': 'topk', 'gdc_k': 64, 'gdc_threshold': 0.0001, 'gdc_avg_degree': 64, 'ppr_alpha': 0.05, 'heat_time': 3.0, 'att_samp_pct': 1, 'use_flux': False, 'exact': False, 'M_nodes': 64, 'new_edges': 'random', 'sparsify': 'S_hat', 'threshold_type': 'topk_adj', 'rw_addD': 0.02, 'rw_rmvR': 0.02, 'rewire_KNN': False, 'rewire_KNN_T': 'T0', 'rewire_KNN_epoch': 5, 'rewire_KNN_k': 64, 'rewire_KNN_sym': False, 'KNN_online': False, 'KNN_online_reps': 4, 'KNN_space': 'pos_distance', 'beltrami': False, 'fa_layer': False, 'pos_enc_type': 'DW64', 'pos_enc_orientation': 'row', 'feat_hidden_dim': 64, 'pos_enc_hidden_dim': 32, 'edge_sampling': False, 'edge_sampling_T': 'T0', 'edge_sampling_epoch': 5, 'edge_sampling_add': 0.64, 'edge_sampling_add_type': 'importance', 'edge_sampling_rmv': 0.32, 'edge_sampling_sym': False, 'edge_sampling_online': False, 'edge_sampling_online_reps': 4, 'edge_sampling_space': 'attention', 'symmetric_attention': False, 'fa_layer_edge_sampling_rmv': 0.8, 'gpu': 0, 'pos_enc_csv': False, 'pos_dist_quantile': 0.001, 'discritize_type': 'norm', 'depth': args.depth, 'norm_exp': 0.15, 'truncate_coeff': 0.04, 'learnable': False, 'truncate_norm': True}
+  opt["step_size"] = args.step_size
   device = "cuda"
   dataset = get_dataset(opt, '../data', False)
   dataset.data = dataset.data.to(device, non_blocking=True)
-  print(type(dataset.data.x))
-  print(type(dataset.data))
+  print(f"Test with depth = {args.depth} and step size = {args.step_size}")
   func = GrandExtendDiscritizedNet(opt, dataset, device).to(device)
   out = func(dataset.data.x)
+  #print(out.shape)
+  
 

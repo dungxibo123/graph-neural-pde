@@ -12,7 +12,7 @@ from best_params import  best_params_dict
 from grand_discritized import GrandExtendDiscritizedNet
 import math
 import json
-
+import uuid
 import wandb
 
 
@@ -67,6 +67,7 @@ def train(model, optimizer, data, pos_encoding=None):
     train_pred_idx = data.train_mask
 
   out = model(feat, pos_encoding)
+
 
   if model.opt['dataset'] == 'ogbn-arxiv':
     lf = torch.nn.functional.nll_loss
@@ -223,7 +224,7 @@ def main(cmd_opt):
       group_name = f"{opt['dataset']}_truncate_{opt['post_group_name']}"
     else:
       group_name = opt['dataset']
-      tags = [opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"]
+    tags = [opt['dataset'], f"depth_{opt['depth']}", f"step_size_{opt['step_size']}", f"truncate_{opt['truncate_coeff']}", f"exp_{opt['norm_exp']}"]
   #######wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name)
     wandb.init(project="grand_discrete_version", entity="dungxibo123", name=wandb_name, group=group_name, tags=tags, job_type = str(opt["jt"]), reinit=True)
     wandb.config = opt
@@ -231,7 +232,7 @@ def main(cmd_opt):
   if cmd_opt['beltrami']:
     opt['beltrami'] = True
 
-  dataset = get_dataset(opt, '../data', opt['not_lcc'])
+  dataset = get_dataset(opt, '/media/SSD/dungvt19/data', opt['not_lcc'])
   device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
   if opt['beltrami']:
@@ -298,7 +299,8 @@ def main(cmd_opt):
       print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, step_size_at_step, norm_exp_at_step, truncate_coeff_at_step))
     else:
       print(log.format(epoch, time.time() - start_time, loss, tmp_train_acc, tmp_val_acc, tmp_test_acc, opt['step_size'], opt['norm_exp'], opt['truncate_coeff']))
-    wandb.log(
+    if not opt['experiment']:
+      wandb.log(
         {
             'train_acc': tmp_train_acc,
             'test_acc': tmp_test_acc,
@@ -307,7 +309,7 @@ def main(cmd_opt):
         },
         step = epoch
     )
-    if opt['learnable']:
+    if opt['learnable'] and not opt['experiment']:
         
       wandb.log({
         'norm_exp': norm_exp_at_step,
@@ -325,8 +327,8 @@ def main(cmd_opt):
       })
       return train_acc, val_acc, test_acc
         
-    
-  wandb.log({'best_val_acc': val_acc,'best_test_acc': test_acc}) 
+  if not opt['experiment']:  
+    wandb.log({'best_val_acc': val_acc,'best_test_acc': test_acc}) 
   print('best val accuracy {:03f} with test accuracy {:03f} at epoch {:d} and best time {:03f}'.format(val_acc, test_acc,
                                                                                                      best_epoch,
                                                                                                      best_time))
